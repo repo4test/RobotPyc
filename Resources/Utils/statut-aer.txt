@@ -1,0 +1,8 @@
+Gagné
+No GO
+Perdu
+Standby
+Envoyé
+Annulé
+Reçu
+Réponse en cours

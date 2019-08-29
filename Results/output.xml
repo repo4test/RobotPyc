@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20190829 14:56:11.529" rpa="false">
+<suite id="s1" name="Créer Rendez-vous Test Suites" source="C:\Users\aung\Documents\PycharmWorkspace\cco_tests\Tests\RDV.robot">
+<test id="s1-t1" name="Create_RDV">
+<kw name="Open Browser to Login Page" library="common" type="setup">
+<kw name="${Browser} IN [ @{Browsers} ]" type="for">
+<kw name="${Browser} = Firefox" type="foritem">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${Site_Url}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:12.038" level="INFO">Opening browser 'Firefox' to base url 'http://vs-cco-rec.ouest.sesame.infotel.com:8080/cco'.</msg>
+<status status="PASS" starttime="20190829 14:56:12.037" endtime="20190829 14:56:18.680"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190829 14:56:18.680" endtime="20190829 14:56:18.937"></status>
+</kw>
+<kw name="Check Login Page" library="keyword">
+<doc>Open login page and check elements</doc>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${Site_Title}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:18.941" level="INFO">Page title is 'CCO'.</msg>
+<status status="PASS" starttime="20190829 14:56:18.938" endtime="20190829 14:56:18.941"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>partial link:${Site_Title}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:18.980" level="INFO">Current page contains element 'partial link:CCO'.</msg>
+<status status="PASS" starttime="20190829 14:56:18.941" endtime="20190829 14:56:18.980"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${app_version}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:18.987" level="INFO">Current page contains element 'class:version'.</msg>
+<status status="PASS" starttime="20190829 14:56:18.980" endtime="20190829 14:56:18.987"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${login_page_title}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:18.991" level="INFO">Current page contains element 'css:h3.panel-title'.</msg>
+<status status="PASS" starttime="20190829 14:56:18.987" endtime="20190829 14:56:18.991"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${user_id_path}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:19.014" level="INFO">Element '//input[@id='username']' is displayed.</msg>
+<status status="PASS" starttime="20190829 14:56:18.991" endtime="20190829 14:56:19.014"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${user_pwd_path}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:19.036" level="INFO">Element '//input[@id='password']' is displayed.</msg>
+<status status="PASS" starttime="20190829 14:56:19.014" endtime="20190829 14:56:19.036"></status>
+</kw>
+<kw name="Page Should Contain Checkbox" library="SeleniumLibrary">
+<doc>Verifies checkbox ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${user_pwd_path}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:19.075" level="INFO">Current page contains checkbox '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20190829 14:56:19.037" endtime="20190829 14:56:19.075"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Afficher le mot de passe</arg>
+</arguments>
+<msg timestamp="20190829 14:56:19.084" level="INFO">Current page contains text 'Afficher le mot de passe'.</msg>
+<status status="PASS" starttime="20190829 14:56:19.076" endtime="20190829 14:56:19.084"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn_connexion}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:19.103" level="INFO">Element '//button[@class='btn btn-raised btn-success']' is displayed.</msg>
+<status status="PASS" starttime="20190829 14:56:19.084" endtime="20190829 14:56:19.103"></status>
+</kw>
+<status status="PASS" starttime="20190829 14:56:18.938" endtime="20190829 14:56:19.103"></status>
+</kw>
+<status status="PASS" starttime="20190829 14:56:12.037" endtime="20190829 14:56:19.103"></status>
+</kw>
+<status status="PASS" starttime="20190829 14:56:12.037" endtime="20190829 14:56:19.103"></status>
+</kw>
+<status status="PASS" starttime="20190829 14:56:12.037" endtime="20190829 14:56:19.103"></status>
+</kw>
+<kw name="RDV_Form" library="keyword">
+<kw name="ConnexionOk" library="common">
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Connexion Réussi</arg>
+</arguments>
+<status status="PASS" starttime="20190829 14:56:19.104" endtime="20190829 14:56:19.105"></status>
+</kw>
+<kw name="Login Pwd Ok" library="common">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${user_id_path}</arg>
+<arg>${login}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:19.105" level="INFO">Typing text 'aung' into text field '//input[@id='username']'.</msg>
+<status status="PASS" starttime="20190829 14:56:19.105" endtime="20190829 14:56:19.144"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${user_pwd_path}</arg>
+<arg>${pwd}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:19.145" level="INFO">Typing password into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20190829 14:56:19.144" endtime="20190829 14:56:19.186"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_connexion}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:19.186" level="INFO">Clicking button '//button[@class='btn btn-raised btn-success']'.</msg>
+<status status="PASS" starttime="20190829 14:56:19.186" endtime="20190829 14:56:19.431"></status>
+</kw>
+<status status="PASS" starttime="20190829 14:56:19.105" endtime="20190829 14:56:19.432"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20190829 14:56:19.432" endtime="20190829 14:56:19.435"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${h2_title}</arg>
+</arguments>
+<status status="PASS" starttime="20190829 14:56:19.435" endtime="20190829 14:56:20.274"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${landingPage_Title}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:20.277" level="INFO">Page title is 'AssistanceTechniques'.</msg>
+<status status="PASS" starttime="20190829 14:56:20.275" endtime="20190829 14:56:20.277"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${logout}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:20.335" level="INFO">Current page contains element 'class:log-out'.</msg>
+<status status="PASS" starttime="20190829 14:56:20.277" endtime="20190829 14:56:20.335"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${expand}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:20.336" level="INFO">Clicking element 'css:button.navbar-expand-toggle'.</msg>
+<status status="PASS" starttime="20190829 14:56:20.336" endtime="20190829 14:56:20.590"></status>
+</kw>
+<status status="PASS" starttime="20190829 14:56:19.104" endtime="20190829 14:56:20.590"></status>
+</kw>
+<kw name="Hide_Nav" library="keyword">
+<arguments>
+<arg>Rendez-vous</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>//div[@class='side-menu-container' ]//span[contains(text(),'${element}')]</arg>
+</arguments>
+<assign>
+<var>${click_menu_element}</var>
+</assign>
+<msg timestamp="20190829 14:56:20.591" level="INFO">${click_menu_element} = //div[@class='side-menu-container' ]//span[contains(text(),'Rendez-vous')]</msg>
+<status status="PASS" starttime="20190829 14:56:20.591" endtime="20190829 14:56:20.591"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_menu_element}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:20.591" level="INFO">Clicking element '//div[@class='side-menu-container' ]//span[contains(text(),'Rendez-vous')]'.</msg>
+<status status="PASS" starttime="20190829 14:56:20.591" endtime="20190829 14:56:20.728"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${menu_burger}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:20.729" level="INFO">Clicking element '//em[@class='glyphicon glyphicon-menu-hamburger icon']'.</msg>
+<status status="PASS" starttime="20190829 14:56:20.728" endtime="20190829 14:56:20.999"></status>
+</kw>
+<status status="PASS" starttime="20190829 14:56:20.590" endtime="20190829 14:56:20.999"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_add}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:20.999" level="INFO">Clicking element 'css:a#button_add'.</msg>
+<status status="PASS" starttime="20190829 14:56:20.999" endtime="20190829 14:56:21.164"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${rdv_form_title}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:21.229" level="INFO">Current page contains text 'Ajout d'un rendez-vous'.</msg>
+<status status="PASS" starttime="20190829 14:56:21.164" endtime="20190829 14:56:21.229"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${rdv_IG_title_xpath}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:21.238" level="INFO">Current page contains element '//h3[contains(text(),'Informations générales')]'.</msg>
+<status status="PASS" starttime="20190829 14:56:21.229" endtime="20190829 14:56:21.238"></status>
+</kw>
+<kw name="Page Should Contain Textfield" library="SeleniumLibrary">
+<doc>Verifies text field ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${rdv_client_field_xpath}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:21.356" level="INFO">Current page contains text field '//input[@id='client']'.</msg>
+<status status="PASS" starttime="20190829 14:56:21.238" endtime="20190829 14:56:21.356"></status>
+</kw>
+<kw name="Page Should Contain Textfield" library="SeleniumLibrary">
+<doc>Verifies text field ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${rdv_objet_field_xpath}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:21.370" level="INFO">Current page contains text field '//input[@id='objet']'.</msg>
+<status status="PASS" starttime="20190829 14:56:21.357" endtime="20190829 14:56:21.370"></status>
+</kw>
+<kw name="Page Should Contain Textfield" library="SeleniumLibrary">
+<doc>Verifies text field ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${rdv_agence_field_xpath}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:21.383" level="INFO">Current page contains text field '//input[@id='agence']'.</msg>
+<status status="PASS" starttime="20190829 14:56:21.370" endtime="20190829 14:56:21.383"></status>
+</kw>
+<kw name="Page Should Contain Textfield" library="SeleniumLibrary">
+<doc>Verifies text field ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${rdv_lieu_field_xpath}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:21.396" level="INFO">Current page contains text field '//input[@id='lieu']'.</msg>
+<status status="PASS" starttime="20190829 14:56:21.383" endtime="20190829 14:56:21.396"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${rdv_pdate_title_xpath}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:21.400" level="INFO">Current page contains element '//h3[contains(text(),'Participants / Dates')]'.</msg>
+<status status="PASS" starttime="20190829 14:56:21.397" endtime="20190829 14:56:21.400"></status>
+</kw>
+<kw name="Page Should Contain Textfield" library="SeleniumLibrary">
+<doc>Verifies text field ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${rdv_organisateur_field_xpath}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:21.412" level="INFO">Current page contains text field '//input[@id='organisateur']'.</msg>
+<status status="PASS" starttime="20190829 14:56:21.400" endtime="20190829 14:56:21.412"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${rdv_participant_input_xpath}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:21.416" level="INFO">Current page contains element '//input[@id='participant']'.</msg>
+<status status="PASS" starttime="20190829 14:56:21.413" endtime="20190829 14:56:21.416"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${rdv_date_field_xpath}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:21.421" level="INFO">Current page contains element '//input[@id='date_rvs']'.</msg>
+<status status="PASS" starttime="20190829 14:56:21.416" endtime="20190829 14:56:21.421"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${rdv_nextdate_input_xpath}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:21.425" level="INFO">Current page contains element '//input[@id='date_next_rvs']'.</msg>
+<status status="PASS" starttime="20190829 14:56:21.421" endtime="20190829 14:56:21.425"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${rdv_CR_title_xpath}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:21.428" level="INFO">Current page contains element '//h3[contains(text(),'CR / Action')]'.</msg>
+<status status="PASS" starttime="20190829 14:56:21.425" endtime="20190829 14:56:21.428"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${rdv_descrip_field_xpath}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:21.432" level="INFO">Current page contains element '//div[@id='description']//p'.</msg>
+<status status="PASS" starttime="20190829 14:56:21.429" endtime="20190829 14:56:21.432"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${rdv_action_label_xpath}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:21.436" level="INFO">Current page contains element '//label[contains(text(),'Action(s)')]'.</msg>
+<status status="PASS" starttime="20190829 14:56:21.432" endtime="20190829 14:56:21.436"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${rdv_organisateur_field_xpath}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:21.441" level="INFO">Current page contains element '//input[@id='organisateur']'.</msg>
+<status status="PASS" starttime="20190829 14:56:21.437" endtime="20190829 14:56:21.442"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_annuler_creation_xpath}</arg>
+</arguments>
+<msg timestamp="20190829 14:56:21.445" level="INFO">Current page contains element '//a[@class='btn btn-raised btn-danger']'.</msg>
+<status status="PASS" starttime="20190829 14:56:21.442" endtime="20190829 14:56:21.445"></status>
+</kw>
+<kw name="Element Should Be Disabled" library="SeleniumLibrary">
+<doc>Verifies that element identified with ``locator`` is disabled.</doc>
+<arguments>
+<arg>${Submit}</arg>
+</arguments>
+<status status="PASS" starttime="20190829 14:56:21.445" endtime="20190829 14:56:21.455"></status>
+</kw>
+<status status="PASS" starttime="20190829 14:56:19.104" endtime="20190829 14:56:21.455"></status>
+</kw>
+<kw name="Future Date" library="FakerLibrary">
+<doc>Get a Date object based on a random date between 1 day from now and a
+given date.
+Accepts date strings that can be recognized by strtotime().</doc>
+<arguments>
+<arg>end_date=+30d, tzinfo=None</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20190829 14:56:21.456" level="INFO">${date} = 2019-09-17</msg>
+<status status="PASS" starttime="20190829 14:56:21.456" endtime="20190829 14:56:21.457"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>'${date}'</arg>
+<arg>result_format=%Y-%m-%d</arg>
+<arg>exclude_millis=yes</arg>
+</arguments>
+<assign>
+<var>${date_rdv}</var>
+</assign>
+<msg timestamp="20190829 14:56:21.460" level="INFO">${date_rdv} = 2019-09-17</msg>
+<status status="PASS" starttime="20190829 14:56:21.457" endtime="20190829 14:56:21.460"></status>
+</kw>
+<kw name="Bs" library="FakerLibrary">
+<doc>:example 'integrate extensible convergence'</doc>
+<assign>
+<var>${objet}</var>
+</assign>
+<msg timestamp="20190829 14:56:21.460" level="INFO">${objet} = utilize clicks-and-mortar vortals</msg>
+<status status="PASS" starttime="20190829 14:56:21.460" endtime="20190829 14:56:21.460"></status>
+</kw>
+<kw name="Agence" library="TestLib">
+<assign>
+<var>${agence}</var>
+</assign>
+<msg timestamp="20190829 14:56:21.461" level="FAIL">FileNotFoundError: [Errno 2] No such file or directory: '../Utils/agence.txt'</msg>
+<status status="FAIL" starttime="20190829 14:56:21.461" endtime="20190829 14:56:21.461"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190829 14:56:21.462" endtime="20190829 14:56:22.365"></status>
+</kw>
+<tags>
+<tag>Création RDV</tag>
+</tags>
+<status status="FAIL" starttime="20190829 14:56:12.036" endtime="20190829 14:56:22.366" critical="yes">FileNotFoundError: [Errno 2] No such file or directory: '../Utils/agence.txt'</status>
+</test>
+<doc>Suite de test pour la création et la gestion des rendez-vous</doc>
+<status status="FAIL" starttime="20190829 14:56:11.531" endtime="20190829 14:56:22.367"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">Création RDV</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Créer Rendez-vous Test Suites">Créer Rendez-vous Test Suites</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

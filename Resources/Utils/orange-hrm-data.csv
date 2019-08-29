@@ -1,0 +1,8 @@
+*** Test Cases ***,${user_id},${user_pwd}
+Login_&_Pwd_vide,${EMPTY},${EMPTY}
+Login_Ok_&_Pwd_vide,guda,${EMPTY}		
+Login_vide_&_Pwd_OK,${EMPTY},gd.201907		
+Login_&_Pwd_KO,aung,nothing
+Login_&_Pwd_OK,Admin,admin123
+Login_Ok_&_Pwd_KO,Admin,something
+Login_KO_&_Pwd_OK,aung,gd.201907			
